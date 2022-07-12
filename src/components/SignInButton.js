@@ -4,7 +4,7 @@ function SignInButton() {
   return (
     <button className="sign-in-btn">
       <CgProfile className="profile-icon" />
-      <span className="sign-in-text">SIGN IN</span>
+      <span className="sign-in-text">Sign in</span>
     </button>
   );
 }

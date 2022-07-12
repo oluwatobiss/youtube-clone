@@ -1,0 +1,23 @@
+.youtube-shorts-icon {
+  width: 2%;
+  fill: none;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke: black;
+  stroke-width: 3px;
+}
+
+.youtube-kids-icon-outline {
+  fill: #282828;
+}
+
+.youtube-tv-icon,
+.youtube-kids-icon {
+  width: 2%;
+  fill: #ff0000;
+}
+
+.youtube-tv-icon-polygon,
+.youtube-kids-icon-polygon {
+  fill: #ffffff;
+}

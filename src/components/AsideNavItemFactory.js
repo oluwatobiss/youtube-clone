@@ -1,8 +1,8 @@
-function AsideNavItemFactory({ icon, name }) {
+function AsideNavItemFactory({ icon, text }) {
   return (
     <div>
       <span>{icon}</span>
-      <span>{name}</span>
+      <span>{text}</span>
     </div>
   );
 }
