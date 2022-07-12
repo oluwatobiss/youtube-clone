@@ -1,8 +1,8 @@
 import "../styles/Header.css";
+import SignInButton from "./SignInButton";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdKeyboardVoice } from "react-icons/md";
 import { BsGrid3X3Gap, BsThreeDotsVertical } from "react-icons/bs";
-import { CgProfile } from "react-icons/cg";
 import { IoIosSearch } from "react-icons/io";
 
 function Header() {
@@ -37,10 +37,7 @@ function Header() {
         <button className="settings-btn" title="Settings">
           <BsThreeDotsVertical />
         </button>
-        <button className="sign-in-btn">
-          <CgProfile className="profile-icon" />
-          <span className="sign-in-text">SIGN IN</span>
-        </button>
+        <SignInButton />
       </div>
     </header>
   );
