@@ -6,8 +6,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Sidebar />
-      <HomeMainSection />
+      <main>
+        <Sidebar />
+        <HomeMainSection />
+      </main>
     </div>
   );
 }
