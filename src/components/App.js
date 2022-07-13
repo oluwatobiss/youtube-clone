@@ -1,16 +1,17 @@
 import Header from "./Header";
-import HomeMainSection from "./HomeMainSection";
+import HomepageVideoGallery from "./HomepageVideoGallery";
 import Sidebar from "./SideBar";
+import "../styles/App.css";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
       <main>
         <Sidebar />
-        <HomeMainSection />
+        <HomepageVideoGallery />
       </main>
-    </div>
+    </>
   );
 }
 

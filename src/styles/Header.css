@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 57px;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,18 +101,6 @@ header {
   width: 40px;
   height: 40px;
   font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.sign-in-btn {
-  display: flex;
-  align-items: center;
-  width: 108.333px;
-  height: 35.6px;
-  padding: 5px 11px;
-  background-color: transparent;
-  border: 1px solid #065fd4;
-  color: #065fd4;
   cursor: pointer;
 }
 

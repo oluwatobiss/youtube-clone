@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,4 +10,20 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.sign-in-btn {
+  display: flex;
+  align-items: center;
+  width: 108.333px;
+  height: 35.6px;
+  padding: 5px 11px;
+  background-color: transparent;
+  border: 1px solid #065fd4;
+  color: #065fd4;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
 }

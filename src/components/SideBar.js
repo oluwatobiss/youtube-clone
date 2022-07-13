@@ -6,7 +6,11 @@ import SignInButton from "./SignInButton";
 import { HiOutlineMusicNote } from "react-icons/hi";
 import { ImTrophy, ImNewspaper } from "react-icons/im";
 import { SiYoutubegaming, SiYoutubemusic } from "react-icons/si";
-import { IoRadioOutline } from "react-icons/io5";
+import {
+  IoRadioOutline,
+  IoSettingsOutline,
+  IoHelpCircleOutline,
+} from "react-icons/io5";
 import { BiMask, BiPlusCircle } from "react-icons/bi";
 import { AiOutlineYoutube } from "react-icons/ai";
 import {
@@ -15,6 +19,8 @@ import {
   MdOutlineSubscriptions,
   MdOutlineVideoLibrary,
   MdOutlineHistory,
+  MdOutlineFlag,
+  MdOutlineFeedback,
 } from "react-icons/md";
 import "../styles/SideBar.css";
 
@@ -22,65 +28,268 @@ function Sidebar() {
   return (
     <aside>
       <section>
-        <AsideNavItemFactory icon={<MdHomeFilled />} text="Home" />
-        <AsideNavItemFactory icon={<MdOutlineExplore />} text="Explore" />
-        <AsideNavItemFactory
-          icon={<YouTubeShortsIcon className="youtube-shorts-icon" />}
-          text="Shorts"
-        />
-        <AsideNavItemFactory
-          icon={<MdOutlineSubscriptions />}
-          text="Subscriptions"
-        />
+        <a
+          className="nav-link active"
+          href="https://www.youtube.com/"
+          title="Home"
+        >
+          <AsideNavItemFactory
+            icon={<MdHomeFilled className="aside-svg-icon" />}
+            text="Home"
+          />
+        </a>
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/feed/explore"
+          title="Explore"
+        >
+          <AsideNavItemFactory
+            icon={<MdOutlineExplore className="aside-svg-icon" />}
+            text="Explore"
+          />
+        </a>
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/shorts/VjjpQPyfZ8Q"
+          title="Shorts"
+        >
+          <AsideNavItemFactory
+            icon={
+              <YouTubeShortsIcon className="aside-svg-icon youtube-shorts-icon" />
+            }
+            text="Shorts"
+          />
+        </a>
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/feed/subscriptions"
+          title="Subscriptions"
+        >
+          <AsideNavItemFactory
+            icon={<MdOutlineSubscriptions className="aside-svg-icon" />}
+            text="Subscriptions"
+          />
+        </a>
       </section>
       <section>
-        <AsideNavItemFactory icon={<MdOutlineVideoLibrary />} text="Library" />
-        <AsideNavItemFactory icon={<MdOutlineHistory />} text="History" />
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/feed/library"
+          title="Library"
+        >
+          <AsideNavItemFactory
+            icon={<MdOutlineVideoLibrary className="aside-svg-icon" />}
+            text="Library"
+          />
+        </a>
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/feed/history"
+          title="History"
+        >
+          <AsideNavItemFactory
+            icon={<MdOutlineHistory className="aside-svg-icon" />}
+            text="History"
+          />
+        </a>
       </section>
-      <section>
-        <span>Sign in to like videos, comment, and subscribe.</span>
+      <section className="sign-in-section">
+        <p>Sign in to like videos, comment, and subscribe.</p>
         <SignInButton />
       </section>
       <section>
-        <span>Best of YouTube</span>
+        <h3>Best of YouTube</h3>
         <span>
-          <AsideNavItemFactory icon={<HiOutlineMusicNote />} text="Music" />
+          <a
+            className="nav-link"
+            href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ"
+            title="Music"
+          >
+            <AsideNavItemFactory
+              icon={<HiOutlineMusicNote className="aside-svg-icon" />}
+              text="Music"
+              shadedIcon="shaded-icon-span"
+            />
+          </a>
         </span>
         <span>
-          <AsideNavItemFactory icon={<ImTrophy />} text="Sports" />
+          <a
+            className="nav-link"
+            href="https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw"
+            title="Sports"
+          >
+            <AsideNavItemFactory
+              icon={<ImTrophy className="aside-svg-icon" />}
+              text="Sports"
+              shadedIcon="shaded-icon-span"
+            />
+          </a>
         </span>
         <span>
-          <AsideNavItemFactory icon={<SiYoutubegaming />} text="Gaming" />
+          <a
+            className="nav-link"
+            href="https://www.youtube.com/gaming"
+            title="Gaming"
+          >
+            <AsideNavItemFactory
+              icon={<SiYoutubegaming className="aside-svg-icon" />}
+              text="Gaming"
+              shadedIcon="shaded-icon-span"
+            />
+          </a>
         </span>
         <span>
-          <AsideNavItemFactory icon={<ImNewspaper />} text="News" />
+          <a
+            className="nav-link"
+            href="https://www.youtube.com/channel/UCYfdidRxbB8Qhf0Nx7ioOYw"
+            title="News"
+          >
+            <AsideNavItemFactory
+              icon={<ImNewspaper className="aside-svg-icon" />}
+              text="News"
+              shadedIcon="shaded-icon-span"
+            />
+          </a>
         </span>
         <span>
-          <AsideNavItemFactory icon={<IoRadioOutline />} text="Live" />
+          <a
+            className="nav-link"
+            href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig"
+            title="Live"
+          >
+            <AsideNavItemFactory
+              icon={<IoRadioOutline className="aside-svg-icon" />}
+              text="Live"
+              shadedIcon="shaded-icon-span"
+            />
+          </a>
         </span>
         <span>
-          <AsideNavItemFactory icon={<BiMask />} text="360° Video" />
+          <a
+            className="nav-link"
+            href="https://www.youtube.com/channel/UCzuqhhs6NWbgTzMuM09WKDQ"
+            title="360° Video"
+          >
+            <AsideNavItemFactory
+              icon={<BiMask className="aside-svg-icon" />}
+              text="360° Video"
+              shadedIcon="shaded-icon-span"
+            />
+          </a>
         </span>
       </section>
       <section>
-        <AsideNavItemFactory icon={<BiPlusCircle />} text="Browse channels" />
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/feed/guide_builder"
+          title="Browse channels"
+        >
+          <AsideNavItemFactory
+            icon={<BiPlusCircle className="aside-svg-icon" />}
+            text="Browse channels"
+          />
+        </a>
       </section>
       <section>
-        <span>More from YouTube</span>
-        <AsideNavItemFactory
-          icon={<AiOutlineYoutube />}
-          text="YouTube Premium"
-        />
-        <AsideNavItemFactory icon={<SiYoutubemusic />} text="YouTube Music" />
-        <AsideNavItemFactory
-          icon={<YouTubeKidsIcon className="youtube-kids-icon" />}
-          text="YouTube Kids"
-        />
-        <AsideNavItemFactory
-          icon={<YouTubeTVIcon className="youtube-tv-icon" />}
-          text="YouTube TV"
-        />
+        <h3>More from YouTube</h3>
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/premium"
+          title="YouTube Premium"
+        >
+          <AsideNavItemFactory
+            icon={<AiOutlineYoutube className="aside-svg-icon" />}
+            text="YouTube Premium"
+          />
+        </a>
+        <a
+          className="nav-link"
+          href="https://music.youtube.com/"
+          title="YouTube Music"
+        >
+          <AsideNavItemFactory
+            icon={<SiYoutubemusic className="aside-svg-icon" />}
+            text="YouTube Music"
+          />
+        </a>
+        <a
+          className="nav-link"
+          href="https://www.youtubekids.com/?source=youtube_web"
+          title="YouTube Kids"
+        >
+          <AsideNavItemFactory
+            icon={
+              <YouTubeKidsIcon className="aside-svg-icon youtube-kids-icon" />
+            }
+            text="YouTube Kids"
+          />
+        </a>
+        <a
+          className="nav-link"
+          href="https://tv.youtube.com/?utm_source=youtube_web&utm_medium=ep&utm_campaign=home&ve=34273"
+          title="YouTube TV"
+        >
+          <AsideNavItemFactory
+            icon={<YouTubeTVIcon className="aside-svg-icon youtube-tv-icon" />}
+            text="YouTube TV"
+          />
+        </a>
       </section>
+      <section>
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/account"
+          title="Settings"
+        >
+          <AsideNavItemFactory
+            icon={<IoSettingsOutline className="aside-svg-icon" />}
+            text="Settings"
+          />
+        </a>
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/reporthistory"
+          title="Report history"
+        >
+          <AsideNavItemFactory
+            icon={<MdOutlineFlag className="aside-svg-icon" />}
+            text="Report history"
+          />
+        </a>
+        <button className="nav-link button" title="Help">
+          <AsideNavItemFactory
+            icon={<IoHelpCircleOutline className="aside-svg-icon" />}
+            text="Help"
+          />
+        </button>
+        <button className="nav-link button" title="Send feedback">
+          <AsideNavItemFactory
+            icon={<MdOutlineFeedback className="aside-svg-icon" />}
+            text="Send feedback"
+          />
+        </button>
+      </section>
+      <footer>
+        <div className="footer-primary-links-div">
+          <a href="https://www.youtube.com/about/">About</a>
+          <a href="https://www.youtube.com/about/press/">Press</a>
+          <a href="https://www.youtube.com/about/copyright/">Copyright</a>
+          <a href="https://www.youtube.com/t/contact_us/">Contact us</a>
+          <a href="https://www.youtube.com/creators/">Creators</a>
+          <a href="https://www.youtube.com/ads/">Advertise</a>
+          <a href="https://developers.google.com/youtube">Developers</a>
+        </div>
+        <div className="footer-secondary-links-div">
+          <a href="https://www.youtube.com/t/terms">Terms</a>
+          <a href="https://www.youtube.com/t/privacy">Privacy</a>
+          <a href="https://www.youtube.com/about/policies/">Policy & Safety</a>
+          <a href="https://www.youtube.com/howyoutubeworks?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen">
+            How YouTube works
+          </a>
+          <a href="https://www.youtube.com/new">Test new features</a>
+        </div>
+        <div className="footer-copyright-div">{`© ${new Date().getFullYear()} Google LLC`}</div>
+      </footer>
     </aside>
   );
 }
