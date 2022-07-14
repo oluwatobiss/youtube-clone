@@ -12,7 +12,7 @@ import {
   IoHelpCircleOutline,
 } from "react-icons/io5";
 import { BiMask, BiPlusCircle } from "react-icons/bi";
-import { AiOutlineYoutube } from "react-icons/ai";
+import { AiFillYoutube } from "react-icons/ai";
 import {
   MdHomeFilled,
   MdOutlineExplore,
@@ -198,7 +198,9 @@ function Sidebar() {
           title="YouTube Premium"
         >
           <AsideNavItemFactory
-            icon={<AiOutlineYoutube className="aside-svg-icon" />}
+            icon={
+              <AiFillYoutube className="aside-svg-icon youtube-premium-icon" />
+            }
             text="YouTube Premium"
           />
         </a>
@@ -208,7 +210,9 @@ function Sidebar() {
           title="YouTube Music"
         >
           <AsideNavItemFactory
-            icon={<SiYoutubemusic className="aside-svg-icon" />}
+            icon={
+              <SiYoutubemusic className="aside-svg-icon youtube-music-icon" />
+            }
             text="YouTube Music"
           />
         </a>
