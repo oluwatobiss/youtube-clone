@@ -9,10 +9,11 @@ async function getVideosData() {
   const data = await response.json();
   const videoItems = data.items;
   const videoData = videoItems.map((i) => {
-    const { id, snippet } = i;
+    const { id, snippet, contentDetails } = i;
     const { title, channelTitle, thumbnails } = snippet;
     return {
       id,
+      contentDetails,
       title,
       channelTitle,
       thumbnails,
