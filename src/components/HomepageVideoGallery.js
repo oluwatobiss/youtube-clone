@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import getVideosData from "../getVideosData";
+import getVideosDataWithChannelData from "../getVideosDataWithChannelData";
 import "../styles/HomepageVideoGallery.css";
 import convertYouTubeAPIDuration from "../convertYouTubeAPIDuration";
 
 function HomepageVideoGallery() {
-  const [videoDataArray, setVideoDataArray] = useState(null);
+  const [videosDataWithChannelData, setVideosDataWithChannelData] =
+    useState(null);
 
   let imgElementArray = [];
 
-  if (videoDataArray) {
-    imgElementArray = videoDataArray.map(function (item) {
+  if (videosDataWithChannelData) {
+    imgElementArray = videosDataWithChannelData.map(function (item) {
       return (
         <div className="video-gallery-item" key={item.id}>
           <a href={`https://www.youtube.com/watch?v=${item.id}`}>
@@ -38,7 +39,9 @@ function HomepageVideoGallery() {
   }
 
   useEffect(() => {
-    getVideosData().then((items) => setVideoDataArray(items));
+    getVideosDataWithChannelData().then((items) =>
+      setVideosDataWithChannelData(items)
+    );
   }, []);
 
   return <div id="homepage-video-gallery">{imgElementArray}</div>;

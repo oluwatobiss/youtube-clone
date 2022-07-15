@@ -1,5 +1,3 @@
-import addChannelDataToEachVideoData from "./addChannelDataToEachVideoData";
-
 async function getVideosData() {
   const youtubeVideosRequestEndPoint =
     "https://www.googleapis.com/youtube/v3/videos";
@@ -29,12 +27,4 @@ async function getVideosData() {
   return videosData;
 }
 
-async function getvideosDataWithChannelData() {
-  const videosData = await getVideosData();
-  const videosDataWithChannelData = await addChannelDataToEachVideoData(
-    videosData
-  );
-  return videosDataWithChannelData;
-}
-
-export default getvideosDataWithChannelData;
+export default getVideosData;
