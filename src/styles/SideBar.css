@@ -1,8 +1,13 @@
 aside {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+  height: 100vh;
   margin-top: 57px;
-  width: 292px;
-  font-size: 0.9rem;
+  background-color: #fff;
   color: #030303;
+  font-size: 0.9rem;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
@@ -10,6 +15,10 @@ aside {
 
 aside:hover {
   scrollbar-color: #909090 transparent;
+}
+
+#wide-sidebar {
+  width: 15.7vw;
 }
 
 aside section {
