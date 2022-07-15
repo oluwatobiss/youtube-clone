@@ -11,14 +11,18 @@ function HomepageVideoGallery() {
   if (videoDataArray) {
     imgElementArray = videoDataArray.map(function (item) {
       return (
-        <div key={item.id}>
+        <div className="video-gallery-item" key={item.id}>
           <a href={`https://www.youtube.com/watch?v=${item.id}`}>
-            <img
-              alt={item.title}
-              src={item.thumbnails.high.url}
-              className="youtube-video-image"
-            />
-            <div>{convertYouTubeAPIDuration(item.contentDetails.duration)}</div>
+            <div className="video-image-div">
+              <img
+                alt={item.title}
+                src={item.thumbnails.medium.url}
+                className="video-image"
+              />
+              <span className="video-duration">
+                {convertYouTubeAPIDuration(item.contentDetails.duration)}
+              </span>
+            </div>
           </a>
           <div>avatar</div>
           <div>video-title</div>

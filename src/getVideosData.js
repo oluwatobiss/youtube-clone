@@ -1,29 +1,40 @@
-const youtubeVideosRequestEndPoint =
-  "https://www.googleapis.com/youtube/v3/videos";
+import addChannelDataToEachVideoData from "./addChannelDataToEachVideoData";
 
 async function getVideosData() {
-  const response = await fetch(
+  const youtubeVideosRequestEndPoint =
+    "https://www.googleapis.com/youtube/v3/videos";
+
+  const fetchedVideos = await fetch(
     `${youtubeVideosRequestEndPoint}?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
-  const data = await response.json();
+  const data = await fetchedVideos.json();
   const videoItems = data.items;
-  const videoData = videoItems.map((i) => {
+  const videosData = videoItems.map((i) => {
     const { id, snippet, contentDetails } = i;
-    const { title, channelTitle, thumbnails } = snippet;
+    const { title, channelId, channelTitle, thumbnails } = snippet;
     return {
       id,
       contentDetails,
       title,
+      channelId,
       channelTitle,
       thumbnails,
     };
   });
 
   console.log(videoItems);
-  //   console.log(videoData);
+  //   console.log(videosData);
 
-  return videoData;
+  return videosData;
 }
 
-export default getVideosData;
+async function getvideosDataWithChannelData() {
+  const videosData = await getVideosData();
+  const videosDataWithChannelData = await addChannelDataToEachVideoData(
+    videosData
+  );
+  return videosDataWithChannelData;
+}
+
+export default getvideosDataWithChannelData;
