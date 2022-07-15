@@ -6,7 +6,6 @@
   left: 15.7vw;
   width: 83.2vw; /* 1.1vw taken by the scroll bar */
   height: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 57px;
   padding: 24px 16px;
   background-color: #f9f9f9;

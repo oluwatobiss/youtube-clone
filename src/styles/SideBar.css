@@ -2,9 +2,9 @@ aside {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 50;
+  z-index: 20;
   height: 100vh;
-  margin-top: 57px;
+  margin-top: 55px;
   background-color: #fff;
   color: #030303;
   font-size: 0.9rem;
