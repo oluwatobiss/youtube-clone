@@ -9,8 +9,9 @@ async function getVideosData() {
   const data = await fetchedVideos.json();
   const videoItems = data.items;
   const videosData = videoItems.map((i) => {
-    const { id, snippet, contentDetails } = i;
-    const { title, channelId, channelTitle, thumbnails } = snippet;
+    const { id, snippet, contentDetails, statistics } = i;
+    const { title, channelId, channelTitle, thumbnails, publishedAt } = snippet;
+    const { viewCount } = statistics;
     return {
       id,
       contentDetails,
@@ -18,11 +19,13 @@ async function getVideosData() {
       channelId,
       channelTitle,
       thumbnails,
+      viewCount,
+      publishedAt,
     };
   });
 
-  console.log(videoItems);
-  //   console.log(videosData);
+  // console.log(videoItems);
+  console.log(videosData);
 
   return videosData;
 }

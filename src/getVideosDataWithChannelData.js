@@ -6,6 +6,7 @@ async function getVideosDataWithChannelData() {
   const videosDataWithChannelData = await addChannelDataToEachVideoData(
     videosData
   );
+  //   console.log(videosDataWithChannelData);
   return videosDataWithChannelData;
 }
 

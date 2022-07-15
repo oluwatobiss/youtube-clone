@@ -2,8 +2,6 @@ async function addChannelDataToEachVideoData(videosData) {
   const data = [...videosData];
   let videosDataWithChannelData = [];
 
-  console.log(data);
-
   for (let i = 0; i < data.length; i++) {
     const youtubeChannelRequestEndPoint =
       "https://www.googleapis.com/youtube/v3/channels";
@@ -12,14 +10,15 @@ async function addChannelDataToEachVideoData(videosData) {
     );
     const channelData = await fetchedChannel.json();
     const channelItems = channelData.items;
+
+    // console.log(channelItems);
+
     const { snippet } = channelItems[0];
     const { thumbnails } = snippet;
-    const channelAvatar = thumbnails.default.url;
+    const channelAvatar = thumbnails.medium.url;
     const videoDataPlusChannelData = { ...data[i], channelAvatar };
     videosDataWithChannelData.push(videoDataPlusChannelData);
   }
-
-  console.log(videosDataWithChannelData);
 
   return videosDataWithChannelData;
 }
