@@ -1,3 +1,4 @@
+import { useState } from "react";
 import SignInButton from "./SignInButton";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdKeyboardVoice } from "react-icons/md";
@@ -6,6 +7,17 @@ import { IoIosSearch } from "react-icons/io";
 import "../styles/Header.css";
 
 function Header() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(e.value);
+  }
+
+  function handleChange(e) {
+    setSearchTerm(e.target.value);
+  }
+
   return (
     <header>
       <section className="menu-n-youtube-logo">
@@ -20,8 +32,13 @@ function Header() {
         />
       </section>
       <section className="input-n-voice-search">
-        <form className="search-form">
-          <input type="search" placeholder="Search" />
+        <form className="search-form" onSubmit={handleSubmit}>
+          <input
+            type="search"
+            value={searchTerm}
+            onChange={handleChange}
+            placeholder="Search"
+          />
           <button title="Search">
             <IoIosSearch />
           </button>
