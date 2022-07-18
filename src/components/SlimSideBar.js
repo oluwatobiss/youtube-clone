@@ -12,18 +12,14 @@ import "../styles/SlimSideBar.css";
 function WideSideBar() {
   return (
     <div id="slim-sidebar" className="hide-slim-sidebar">
-      <a
-        className="slim-nav-link active"
-        href="https://www.youtube.com/"
-        title="Home"
-      >
+      <button className="slim-nav-link button active" title="Home">
         <AsideNavItemFactory
           divName="slim-sidebar-item-div"
           iconSpanName="slim-sidebar-icon-span"
           icon={<MdHomeFilled className="aside-svg-icon" />}
           text="Home"
         />
-      </a>
+      </button>
       <a
         className="slim-nav-link"
         href="https://www.youtube.com/feed/explore"

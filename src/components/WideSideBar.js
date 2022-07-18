@@ -28,18 +28,14 @@ function WideSideBar() {
   return (
     <div id="wide-sidebar">
       <section>
-        <a
-          className="wide-nav-link active"
-          href="https://www.youtube.com/"
-          title="Home"
-        >
+        <button className="wide-nav-link button active" title="Home">
           <AsideNavItemFactory
             divName="wide-sidebar-item-div"
             iconSpanName="wide-sidebar-icon-span"
             icon={<MdHomeFilled className="aside-svg-icon" />}
             text="Home"
           />
-        </a>
+        </button>
         <a
           className="wide-nav-link"
           href="https://www.youtube.com/feed/explore"

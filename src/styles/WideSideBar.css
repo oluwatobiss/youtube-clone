@@ -36,17 +36,17 @@
   text-decoration: none;
 }
 
-.wide-nav-link.active {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.nav-link.button {
+.wide-nav-link.button {
   padding: 0;
   background-color: transparent;
   border: none;
   font-size: 0.9rem;
   color: #030303;
   cursor: pointer;
+}
+
+.wide-nav-link.active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .wide-sidebar-item-div {
