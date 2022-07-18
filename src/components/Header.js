@@ -11,7 +11,7 @@ function Header() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(e.value);
+    window.location.href = `https://www.youtube.com/results?search_query=${searchTerm}`;
   }
 
   function handleChange(e) {

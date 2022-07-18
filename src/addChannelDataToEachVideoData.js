@@ -10,13 +10,13 @@ async function addChannelDataToEachVideoData(videosData) {
     );
     const channelData = await fetchedChannel.json();
     const channelItems = channelData.items;
-
-    // console.log(channelItems);
-
     const { snippet } = channelItems[0];
     const { thumbnails } = snippet;
-    const channelAvatar = thumbnails.medium.url;
-    const videoDataPlusChannelData = { ...data[i], channelAvatar };
+    const defaultChannelAvatar = thumbnails.default.url;
+    const videoDataPlusChannelData = {
+      ...data[i],
+      defaultChannelAvatar,
+    };
     videosDataWithChannelData.push(videoDataPlusChannelData);
   }
 

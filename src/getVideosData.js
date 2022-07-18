@@ -24,9 +24,6 @@ async function getVideosData() {
     };
   });
 
-  // console.log(videoItems);
-  console.log(videosData);
-
   return videosData;
 }
 

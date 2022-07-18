@@ -45,7 +45,7 @@ function HomepageVideoGallery() {
               >
                 <img
                   alt=""
-                  src={item.channelAvatar}
+                  src={item.defaultChannelAvatar}
                   className="video-gallery-item-avatar-image"
                 />
               </a>
