@@ -3,13 +3,14 @@ import { abbreviateNumber } from "js-abbreviation-number";
 import moment from "moment";
 import getVideosDataWithChannelData from "../getVideosDataWithChannelData";
 import convertYouTubeAPIDuration from "../convertYouTubeAPIDuration";
+import Loader from "./Loader";
 import "../styles/HomepageVideoGallery.css";
 
 function HomepageVideoGallery() {
   const [videosDataWithChannelData, setVideosDataWithChannelData] =
     useState(null);
 
-  let imgElementArray = [];
+  let imgElementArray = null;
 
   if (videosDataWithChannelData) {
     imgElementArray = videosDataWithChannelData.map(function (item) {
@@ -78,7 +79,11 @@ function HomepageVideoGallery() {
     );
   }, []);
 
-  return <div id="homepage-video-gallery">{imgElementArray}</div>;
+  return (
+    <div id="homepage-video-gallery">
+      {imgElementArray ? imgElementArray : Loader()}
+    </div>
+  );
 }
 
 export default HomepageVideoGallery;
