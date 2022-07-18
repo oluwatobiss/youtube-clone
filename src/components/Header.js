@@ -18,10 +18,36 @@ function Header() {
     setSearchTerm(e.target.value);
   }
 
+  function handleClick() {
+    const wideSidebar = document.getElementById("wide-sidebar");
+    const slimSidebar = document.getElementById("slim-sidebar");
+    const gallerySection = document.getElementById("homepage-video-gallery");
+
+    wideSidebar.classList.toggle("hide-wide-sidebar");
+    slimSidebar.classList.toggle("hide-slim-sidebar");
+    gallerySection.classList.toggle("if-wide-sidebar-is-active");
+    gallerySection.classList.toggle("if-slim-sidebar-is-active");
+  }
+
+  function handleMouseDown(e) {
+    e.currentTarget.style.backgroundColor = "#dedede";
+    e.currentTarget.style.border = "0.3px solid #d3d3d3";
+  }
+
+  function handleMouseUp(e) {
+    e.currentTarget.style.backgroundColor = "transparent";
+    e.currentTarget.style.border = "none";
+  }
+
   return (
     <header>
       <section className="menu-n-youtube-logo">
-        <button className="menu-btn">
+        <button
+          className="menu-btn"
+          onClick={handleClick}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+        >
           <AiOutlineMenu />
         </button>
         <img

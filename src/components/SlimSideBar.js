@@ -11,7 +11,7 @@ import "../styles/SlimSideBar.css";
 
 function WideSideBar() {
   return (
-    <div id="slim-sidebar">
+    <div id="slim-sidebar" className="hide-slim-sidebar">
       <a
         className="slim-nav-link active"
         href="https://www.youtube.com/"

@@ -1,5 +1,8 @@
-#wide-sidebar {
+.hide-wide-sidebar {
   display: none;
+}
+
+#wide-sidebar {
   width: 15.7vw;
 }
 

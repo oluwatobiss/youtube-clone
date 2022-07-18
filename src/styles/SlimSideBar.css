@@ -1,3 +1,7 @@
+.hide-slim-sidebar {
+  display: none;
+}
+
 #slim-sidebar {
   width: 4.5vw;
 }

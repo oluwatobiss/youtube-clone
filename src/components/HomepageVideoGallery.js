@@ -80,7 +80,7 @@ function HomepageVideoGallery() {
   }, []);
 
   return (
-    <div id="homepage-video-gallery">
+    <div id="homepage-video-gallery" className="if-wide-sidebar-is-active">
       {imgElementArray ? imgElementArray : Loader()}
     </div>
   );

@@ -20,7 +20,9 @@ header {
 
 .menu-btn {
   border: none;
+  border-radius: 50%;
   background-color: transparent;
+  transition: 0.6s;
   cursor: pointer;
 }
 

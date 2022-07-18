@@ -1,10 +1,18 @@
+.if-wide-sidebar-is-active {
+  width: 83.2vw; /* 1.1vw taken by the scroll bar */
+  left: 15.7vw;
+}
+
+.if-slim-sidebar-is-active {
+  width: 94.4vw; /* 1.1vw taken by the scroll bar */
+  left: 4.5vw;
+}
+
 #homepage-video-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 305px;
   position: relative;
-  left: 15.7vw;
-  width: 83.2vw; /* 1.1vw taken by the scroll bar */
   height: 100%;
   margin-top: 57px;
   padding: 24px 16px;
@@ -27,7 +35,6 @@
 
 .video-gallery-item-image {
   width: 100%;
-  height: 166.367px;
   object-fit: cover;
 }
 
