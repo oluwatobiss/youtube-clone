@@ -22,6 +22,7 @@ import {
   MdOutlineFlag,
   MdOutlineFeedback,
 } from "react-icons/md";
+import "../styles/WideSideBar.css";
 
 function WideSideBar() {
   return (

@@ -1,0 +1,132 @@
+#wide-sidebar {
+  width: 15.7vw;
+}
+
+#wide-sidebar section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+}
+
+#wide-sidebar .sign-in-section {
+  padding: 16px 32px;
+  line-height: 1.35rem;
+}
+
+#wide-sidebar .sign-in-section p {
+  margin-bottom: 12px;
+}
+
+#wide-sidebar h3 {
+  padding: 8px 24px;
+  color: #606060;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  display: block;
+  width: 100%;
+  height: 40px;
+  color: #030303;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-link.button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  color: #030303;
+  cursor: pointer;
+}
+
+.aside-item-div {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  width: 100%;
+  height: 100%;
+}
+
+.aside-item-div:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.aside-icon-span {
+  margin-right: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.aside-svg-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.shaded-icon-span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #404040;
+  border-radius: 50%;
+}
+
+.shaded-icon-span svg {
+  width: 14px;
+  height: 14px;
+}
+
+.youtube-shorts-icon {
+  fill: none;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke: black;
+  stroke-width: 7px;
+}
+
+.youtube-kids-icon-outline {
+  fill: #282828;
+}
+
+.youtube-tv-icon,
+.youtube-kids-icon,
+.youtube-music-icon,
+.youtube-premium-icon {
+  fill: #ff0000;
+}
+
+.youtube-tv-icon-polygon,
+.youtube-kids-icon-polygon {
+  fill: #ffffff;
+}
+
+.footer-primary-links-div {
+  padding: 16px 24px 0;
+}
+
+.footer-secondary-links-div {
+  padding: 12px 24px 0;
+}
+
+.footer-copyright-div {
+  padding: 16px 24px;
+  color: #909090;
+  font-size: 0.75rem;
+}
+
+footer a {
+  display: inline-block;
+  margin-right: 8px;
+  text-decoration: none;
+  color: #606060;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.35rem;
+}
