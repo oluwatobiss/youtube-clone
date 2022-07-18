@@ -1,0 +1,28 @@
+#slim-sidebar {
+  width: 4.5vw;
+}
+
+.slim-nav-link {
+  display: block;
+  width: 100%;
+  color: #030303;
+  text-decoration: none;
+}
+
+.slim-sidebar-item-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 0 14px;
+  font-size: 0.6rem;
+}
+
+.slim-sidebar-item-div:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.slim-sidebar-icon-span {
+  margin-bottom: 6px;
+}

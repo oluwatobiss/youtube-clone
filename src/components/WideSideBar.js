@@ -29,34 +29,37 @@ function WideSideBar() {
     <div id="wide-sidebar">
       <section>
         <a
-          className="nav-link active"
+          className="wide-nav-link active"
           href="https://www.youtube.com/"
           title="Home"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<MdHomeFilled className="aside-svg-icon" />}
             text="Home"
           />
         </a>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtube.com/feed/explore"
           title="Explore"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<MdOutlineExplore className="aside-svg-icon" />}
             text="Explore"
           />
         </a>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtube.com/shorts/VjjpQPyfZ8Q"
           title="Shorts"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={
               <YouTubeShortsIcon className="aside-svg-icon youtube-shorts-icon" />
             }
@@ -64,12 +67,13 @@ function WideSideBar() {
           />
         </a>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtube.com/feed/subscriptions"
           title="Subscriptions"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<MdOutlineSubscriptions className="aside-svg-icon" />}
             text="Subscriptions"
           />
@@ -77,23 +81,25 @@ function WideSideBar() {
       </section>
       <section>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtube.com/feed/library"
           title="Library"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<MdOutlineVideoLibrary className="aside-svg-icon" />}
             text="Library"
           />
         </a>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtube.com/feed/history"
           title="History"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<MdOutlineHistory className="aside-svg-icon" />}
             text="History"
           />
@@ -107,12 +113,13 @@ function WideSideBar() {
         <h3>Best of YouTube</h3>
         <span>
           <a
-            className="nav-link"
+            className="wide-nav-link"
             href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ"
             title="Music"
           >
             <AsideNavItemFactory
-              classname="wide-sidebar-item-div"
+              divName="wide-sidebar-item-div"
+              iconSpanName="wide-sidebar-icon-span"
               icon={<HiOutlineMusicNote className="aside-svg-icon" />}
               text="Music"
               shadedIcon="shaded-icon-span"
@@ -121,12 +128,13 @@ function WideSideBar() {
         </span>
         <span>
           <a
-            className="nav-link"
+            className="wide-nav-link"
             href="https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw"
             title="Sports"
           >
             <AsideNavItemFactory
-              classname="wide-sidebar-item-div"
+              divName="wide-sidebar-item-div"
+              iconSpanName="wide-sidebar-icon-span"
               icon={<ImTrophy className="aside-svg-icon" />}
               text="Sports"
               shadedIcon="shaded-icon-span"
@@ -135,12 +143,13 @@ function WideSideBar() {
         </span>
         <span>
           <a
-            className="nav-link"
+            className="wide-nav-link"
             href="https://www.youtube.com/gaming"
             title="Gaming"
           >
             <AsideNavItemFactory
-              classname="wide-sidebar-item-div"
+              divName="wide-sidebar-item-div"
+              iconSpanName="wide-sidebar-icon-span"
               icon={<SiYoutubegaming className="aside-svg-icon" />}
               text="Gaming"
               shadedIcon="shaded-icon-span"
@@ -149,12 +158,13 @@ function WideSideBar() {
         </span>
         <span>
           <a
-            className="nav-link"
+            className="wide-nav-link"
             href="https://www.youtube.com/channel/UCYfdidRxbB8Qhf0Nx7ioOYw"
             title="News"
           >
             <AsideNavItemFactory
-              classname="wide-sidebar-item-div"
+              divName="wide-sidebar-item-div"
+              iconSpanName="wide-sidebar-icon-span"
               icon={<ImNewspaper className="aside-svg-icon" />}
               text="News"
               shadedIcon="shaded-icon-span"
@@ -163,12 +173,13 @@ function WideSideBar() {
         </span>
         <span>
           <a
-            className="nav-link"
+            className="wide-nav-link"
             href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig"
             title="Live"
           >
             <AsideNavItemFactory
-              classname="wide-sidebar-item-div"
+              divName="wide-sidebar-item-div"
+              iconSpanName="wide-sidebar-icon-span"
               icon={<IoRadioOutline className="aside-svg-icon" />}
               text="Live"
               shadedIcon="shaded-icon-span"
@@ -177,12 +188,13 @@ function WideSideBar() {
         </span>
         <span>
           <a
-            className="nav-link"
+            className="wide-nav-link"
             href="https://www.youtube.com/channel/UCzuqhhs6NWbgTzMuM09WKDQ"
             title="360° Video"
           >
             <AsideNavItemFactory
-              classname="wide-sidebar-item-div"
+              divName="wide-sidebar-item-div"
+              iconSpanName="wide-sidebar-icon-span"
               icon={<BiMask className="aside-svg-icon" />}
               text="360° Video"
               shadedIcon="shaded-icon-span"
@@ -192,12 +204,13 @@ function WideSideBar() {
       </section>
       <section>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtube.com/feed/guide_builder"
           title="Browse channels"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<BiPlusCircle className="aside-svg-icon" />}
             text="Browse channels"
           />
@@ -206,12 +219,13 @@ function WideSideBar() {
       <section>
         <h3>More from YouTube</h3>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtube.com/premium"
           title="YouTube Premium"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={
               <AiFillYoutube className="aside-svg-icon youtube-premium-icon" />
             }
@@ -219,12 +233,13 @@ function WideSideBar() {
           />
         </a>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://music.youtube.com/"
           title="YouTube Music"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={
               <SiYoutubemusic className="aside-svg-icon youtube-music-icon" />
             }
@@ -232,12 +247,13 @@ function WideSideBar() {
           />
         </a>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtubekids.com/?source=youtube_web"
           title="YouTube Kids"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={
               <YouTubeKidsIcon className="aside-svg-icon youtube-kids-icon" />
             }
@@ -245,12 +261,13 @@ function WideSideBar() {
           />
         </a>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://tv.youtube.com/?utm_source=youtube_web&utm_medium=ep&utm_campaign=home&ve=34273"
           title="YouTube TV"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<YouTubeTVIcon className="aside-svg-icon youtube-tv-icon" />}
             text="YouTube TV"
           />
@@ -258,37 +275,41 @@ function WideSideBar() {
       </section>
       <section>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtube.com/account"
           title="Settings"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<IoSettingsOutline className="aside-svg-icon" />}
             text="Settings"
           />
         </a>
         <a
-          className="nav-link"
+          className="wide-nav-link"
           href="https://www.youtube.com/reporthistory"
           title="Report history"
         >
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<MdOutlineFlag className="aside-svg-icon" />}
             text="Report history"
           />
         </a>
-        <button className="nav-link button" title="Help">
+        <button className="wide-nav-link button" title="Help">
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<IoHelpCircleOutline className="aside-svg-icon" />}
             text="Help"
           />
         </button>
-        <button className="nav-link button" title="Send feedback">
+        <button className="wide-nav-link button" title="Send feedback">
           <AsideNavItemFactory
-            classname="wide-sidebar-item-div"
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
             icon={<MdOutlineFeedback className="aside-svg-icon" />}
             text="Send feedback"
           />

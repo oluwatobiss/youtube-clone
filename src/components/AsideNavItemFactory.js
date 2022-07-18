@@ -1,7 +1,13 @@
-function AsideNavItemFactory({ classname, icon, text, shadedIcon }) {
+function AsideNavItemFactory({
+  divName,
+  iconSpanName,
+  icon,
+  text,
+  shadedIcon,
+}) {
   return (
-    <div className={classname}>
-      <span className={`aside-icon-span${shadedIcon ? " " + shadedIcon : ""}`}>
+    <div className={divName}>
+      <span className={`${iconSpanName}${shadedIcon ? " " + shadedIcon : ""}`}>
         {icon}
       </span>
       <span>{text}</span>

@@ -25,7 +25,7 @@
   text-transform: uppercase;
 }
 
-.nav-link {
+.wide-nav-link {
   display: block;
   width: 100%;
   height: 40px;
@@ -33,7 +33,7 @@
   text-decoration: none;
 }
 
-.nav-link.active {
+.wide-nav-link.active {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -58,7 +58,7 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.aside-icon-span {
+.wide-sidebar-icon-span {
   margin-right: 24px;
   width: 24px;
   height: 24px;
