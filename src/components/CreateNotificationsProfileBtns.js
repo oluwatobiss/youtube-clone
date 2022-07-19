@@ -3,7 +3,10 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 
 function CreateNotificationsProfileBtns() {
   return (
-    <div className="header-right-section-div create-notifications-profile-btns">
+    <div
+      id="create-notifications-profile-btns"
+      className="header-right-section-div"
+    >
       <button className="header-right-section-btn" title="Create">
         <RiVideoAddLine />
       </button>
@@ -11,7 +14,11 @@ function CreateNotificationsProfileBtns() {
         <IoMdNotificationsOutline />
       </button>
       <button className="header-right-section-btn profile-btn">
-        <IoMdNotificationsOutline />
+        <img
+          alt="Profile"
+          src={require("../assets/images/profile-user-pngrepo-com.png")}
+          id="profile-image"
+        />
       </button>
     </div>
   );

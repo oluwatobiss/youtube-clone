@@ -101,7 +101,7 @@ function WideSideBar() {
           />
         </a>
       </section>
-      <section className="sign-in-section">
+      <section id="sidebar-sign-in-section" className="sign-in-section">
         <p>Sign in to like videos, comment, and subscribe.</p>
         <SignInButton />
       </section>

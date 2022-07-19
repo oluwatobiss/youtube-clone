@@ -1,14 +1,11 @@
 import { CgProfile } from "react-icons/cg";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import "../firebase-config";
 
 function SignInButton() {
   async function handleClick() {
     const auth = getAuth();
     const authProvider = new GoogleAuthProvider();
-    const signInResponse = await signInWithPopup(auth, authProvider);
-    const userInfo = signInResponse.user;
-    console.log(userInfo);
+    signInWithPopup(auth, authProvider);
   }
 
   return (

@@ -98,7 +98,7 @@ header {
   align-items: center;
 }
 
-.apps-settings-sign-in-btns {
+#apps-settings-sign-in-btns {
   display: none;
 }
 
@@ -112,12 +112,8 @@ header {
   cursor: pointer;
 }
 
-.apps-settings-sign-in-btns button {
+#apps-settings-sign-in-btns button {
   font-size: 1.1rem;
-}
-
-.create-notifications-profile-btns button {
-  font-size: 1.35rem;
 }
 
 .sign-in-icon {
@@ -129,4 +125,13 @@ header {
   padding-left: 8px;
   font-family: "Roboto", sans-serif;
   font-size: 0.92rem;
+}
+
+#create-notifications-profile-btns button {
+  font-size: 1.35rem;
+}
+
+#profile-image {
+  width: 32px;
+  height: 32px;
 }
