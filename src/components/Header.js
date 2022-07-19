@@ -1,9 +1,8 @@
 import { useState } from "react";
-import SignInButton from "./SignInButton";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdKeyboardVoice } from "react-icons/md";
-import { BsGrid3X3Gap, BsThreeDotsVertical } from "react-icons/bs";
 import { IoIosSearch } from "react-icons/io";
+import AppsSettingsSignInBtns from "./AppsSettingsSignInBtns";
 import "../styles/Header.css";
 
 function Header() {
@@ -74,13 +73,7 @@ function Header() {
         </button>
       </section>
       <section className="header-right-section">
-        <button className="youtube-apps-btn" title="YouTube apps">
-          <BsGrid3X3Gap />
-        </button>
-        <button className="settings-btn" title="Settings">
-          <BsThreeDotsVertical />
-        </button>
-        <SignInButton />
+        <AppsSettingsSignInBtns />
       </section>
     </header>
   );
