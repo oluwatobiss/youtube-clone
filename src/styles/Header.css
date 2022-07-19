@@ -93,7 +93,7 @@ header {
   cursor: pointer;
 }
 
-.apps-settings-signin-btns {
+.header-right-section {
   display: flex;
   align-items: center;
 }

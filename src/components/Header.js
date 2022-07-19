@@ -73,7 +73,7 @@ function Header() {
           <MdKeyboardVoice />
         </button>
       </section>
-      <section className="apps-settings-signin-btns">
+      <section className="header-right-section">
         <button className="youtube-apps-btn" title="YouTube apps">
           <BsGrid3X3Gap />
         </button>
