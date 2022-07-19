@@ -3,15 +3,15 @@ import { BsGrid3X3Gap, BsThreeDotsVertical } from "react-icons/bs";
 
 function AppsSettingsSignInBtns() {
   return (
-    <>
-      <button className="youtube-apps-btn" title="YouTube apps">
+    <div className="header-right-section-div apps-settings-sign-in-btns">
+      <button className="header-right-section-btn" title="YouTube apps">
         <BsGrid3X3Gap />
       </button>
-      <button className="settings-btn" title="Settings">
+      <button className="header-right-section-btn" title="Settings">
         <BsThreeDotsVertical />
       </button>
       <SignInButton />
-    </>
+    </div>
   );
 }
 

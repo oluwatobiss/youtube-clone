@@ -93,23 +93,34 @@ header {
   cursor: pointer;
 }
 
-.header-right-section {
+.header-right-section-div {
   display: flex;
   align-items: center;
 }
 
-.youtube-apps-btn,
-.settings-btn {
+.apps-settings-sign-in-btns {
+  display: none;
+}
+
+.header-right-section-btn {
   margin-right: 8px;
   border: none;
   background-color: transparent;
   width: 40px;
   height: 40px;
-  font-size: 1.1rem;
+
   cursor: pointer;
 }
 
-.profile-icon {
+.apps-settings-sign-in-btns button {
+  font-size: 1.1rem;
+}
+
+.create-notifications-profile-btns button {
+  font-size: 1.35rem;
+}
+
+.sign-in-icon {
   width: 23px;
   height: 23px;
 }

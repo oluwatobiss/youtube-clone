@@ -13,7 +13,7 @@ function SignInButton() {
 
   return (
     <button className="sign-in-btn" onClick={handleClick}>
-      <CgProfile className="profile-icon" />
+      <CgProfile className="sign-in-icon" />
       <span className="sign-in-text">Sign in</span>
     </button>
   );

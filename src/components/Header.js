@@ -3,6 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { MdKeyboardVoice } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
 import AppsSettingsSignInBtns from "./AppsSettingsSignInBtns";
+import CreateNotificationsProfileBtns from "./CreateNotificationsProfileBtns";
 import "../styles/Header.css";
 
 function Header() {
@@ -72,8 +73,9 @@ function Header() {
           <MdKeyboardVoice />
         </button>
       </section>
-      <section className="header-right-section">
+      <section>
         <AppsSettingsSignInBtns />
+        <CreateNotificationsProfileBtns />
       </section>
     </header>
   );
