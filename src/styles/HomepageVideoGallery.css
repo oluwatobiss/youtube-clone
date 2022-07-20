@@ -23,6 +23,7 @@
   margin: 0 8px 40px;
   padding: 4px;
   border-radius: 4.5px;
+  cursor: pointer;
 }
 
 .video-gallery-item a {

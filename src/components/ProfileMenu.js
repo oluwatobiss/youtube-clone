@@ -1,4 +1,5 @@
-import { getAuth } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { onAuthStateChanged, getAuth } from "firebase/auth";
 import { MdOutlineLogin, MdOutlineFeedback } from "react-icons/md";
 import { BiDollarCircle } from "react-icons/bi";
 import { RiShieldUserLine } from "react-icons/ri";
@@ -7,15 +8,23 @@ import MenuItemFactory from "./MenuItemFactory";
 import "../styles/ProfileMenu.css";
 
 function ProfileMenu() {
-  let userProfilePhoto = "";
-  let userName = "";
-  let userEmail = "";
+  const [userProfilePhoto, setUserProfilePhoto] = useState(
+    require("../assets/images/profile-user-pngrepo-com.png")
+  );
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
 
-  if (getAuth().currentUser) {
-    userProfilePhoto = getAuth().currentUser.photoURL;
-    userName = getAuth().currentUser.displayName;
-    userEmail = getAuth().currentUser.email;
-  }
+  useEffect(() => {
+    onAuthStateChanged(getAuth(), handleAuthStateChange);
+
+    function handleAuthStateChange() {
+      if (getAuth().currentUser) {
+        setUserProfilePhoto(getAuth().currentUser.photoURL);
+        setUserName(getAuth().currentUser.displayName);
+        setUserEmail(getAuth().currentUser.email);
+      }
+    }
+  }, []);
 
   return (
     <div id="profile-menu">

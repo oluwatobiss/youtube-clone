@@ -18,7 +18,21 @@ function Header() {
     setSearchTerm(e.target.value);
   }
 
-  function handleClick() {
+  function handleHeaderClick(e) {
+    const profileButton = document.getElementById("profile-btn");
+    const headerProfileImage = document.getElementById("header-profile-image");
+    const profileMenu = document.getElementById("profile-menu");
+    const profileMenuIsActive = [...profileMenu.classList].includes("visible");
+    if (
+      e.target !== profileButton &&
+      e.target !== headerProfileImage &&
+      profileMenuIsActive
+    ) {
+      profileMenu.classList.remove("visible");
+    }
+  }
+
+  function handleMenuBtnClick() {
     const wideSidebar = document.getElementById("wide-sidebar");
     const slimSidebar = document.getElementById("slim-sidebar");
     const gallerySection = document.getElementById("homepage-video-gallery");
@@ -40,11 +54,11 @@ function Header() {
   }
 
   return (
-    <header>
+    <header onClick={handleHeaderClick}>
       <section className="menu-n-youtube-logo">
         <button
           className="menu-btn"
-          onClick={handleClick}
+          onClick={handleMenuBtnClick}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
         >

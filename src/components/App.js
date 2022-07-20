@@ -8,6 +8,14 @@ import "../firebase-config";
 import "../styles/App.css";
 
 function App() {
+  function handleClick() {
+    const profileMenu = document.getElementById("profile-menu");
+    const profileMenuIsActive = [...profileMenu.classList].includes("visible");
+    if (profileMenuIsActive) {
+      profileMenu.classList.remove("visible");
+    }
+  }
+
   useEffect(() => {
     // Listen and handle changes to the user's authentication:
     onAuthStateChanged(getAuth(), handleAuthStateChange);
@@ -23,7 +31,7 @@ function App() {
       const sidebarSignInSection = document.getElementById(
         "sidebar-sign-in-section"
       );
-      const profileImage = document.getElementById("profile-image");
+      const profileImage = document.getElementById("header-profile-image");
 
       if (userInfo) {
         console.log(userInfo);
@@ -48,11 +56,31 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    function handleKeydown(e) {
+      const profileMenu = document.getElementById("profile-menu");
+      const profileMenuIsActive = [...profileMenu.classList].includes(
+        "visible"
+      );
+      if (e.key === "Escape" && profileMenuIsActive) {
+        profileMenu.classList.remove("visible");
+      }
+    }
+
+    document.addEventListener("keydown", handleKeydown);
+    // document.addEventListener("mousedown", handleClick);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeydown);
+      // document.removeEventListener("mousedown", handleClick);
+    };
+  }, []);
+
   return (
     <>
       <ProfileMenu />
       <Header />
-      <main>
+      <main onClick={handleClick}>
         <Sidebar />
         <HomepageVideoGallery />
       </main>

@@ -1,12 +1,17 @@
 #profile-menu {
+  display: none;
   position: fixed;
   z-index: 30;
-  left: 74.5vw;
+  /* left: 74.5vw; */
   top: 11px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.98);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-top: none;
+}
+
+#profile-menu.visible {
+  display: block;
 }
 
 #profile-menu .menu-item-link,
