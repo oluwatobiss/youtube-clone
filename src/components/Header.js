@@ -11,7 +11,9 @@ function Header() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    window.location.href = `https://www.youtube.com/results?search_query=${searchTerm}`;
+    if (searchTerm) {
+      window.location.href = `https://www.youtube.com/results?search_query=${searchTerm}`;
+    }
   }
 
   function handleChange(e) {
