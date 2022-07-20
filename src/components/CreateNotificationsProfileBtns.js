@@ -17,7 +17,7 @@ function CreateNotificationsProfileBtns() {
         <img
           alt="Profile"
           src={require("../assets/images/profile-user-pngrepo-com.png")}
-          id="profile-image"
+          id="header-profile-image"
         />
       </button>
     </div>

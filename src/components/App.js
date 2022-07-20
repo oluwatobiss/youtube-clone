@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import ProfileMenu from "./ProfileMenu";
 import Header from "./Header";
 import HomepageVideoGallery from "./HomepageVideoGallery";
 import Sidebar from "./SideBar";
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <>
+      <ProfileMenu />
       <Header />
       <main>
         <Sidebar />

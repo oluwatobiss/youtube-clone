@@ -1,0 +1,63 @@
+#profile-menu {
+  position: fixed;
+  z-index: 30;
+  left: 74.5vw;
+  top: 11px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+}
+
+#profile-menu .menu-item-link,
+#profile-menu .menu-item-btn {
+  height: 40px;
+}
+
+.user-info-section {
+  display: flex;
+  background-color: rgba(255, 255, 255);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.menu-profile-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.user-info-span .username {
+  padding-top: 3px;
+  font-weight: 500;
+  font-size: 1.01rem;
+}
+
+.user-info-span .user-email {
+  padding-top: 3px;
+  padding-bottom: 9px;
+  font-size: 0.95rem;
+}
+
+.manage-account-link {
+  text-decoration: none;
+  font-size: 0.88rem;
+  color: #065fd4;
+}
+
+#profile-menu-links {
+  overflow-y: auto;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+}
+
+#profile-menu-links section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  font-size: 0.88rem;
+}
+
+#profile-menu-links .menu-item-btn,
+#profile-menu-links .menu-item-link {
+  height: 40px;
+}
