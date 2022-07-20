@@ -1,8 +1,8 @@
 import getVideosData from "./getVideosData";
 import addChannelDataToEachVideoData from "./addChannelDataToEachVideoData";
 
-async function getVideosDataWithChannelData() {
-  const videosData = await getVideosData();
+async function getVideosDataWithChannelData(nextPageToken) {
+  const videosData = await getVideosData(nextPageToken);
   const videosDataWithChannelData = await addChannelDataToEachVideoData(
     videosData
   );

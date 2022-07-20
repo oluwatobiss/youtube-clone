@@ -1,5 +1,5 @@
-import { abbreviateNumber } from "js-abbreviation-number";
 import moment from "moment";
+import { abbreviateNumber } from "js-abbreviation-number";
 import convertYouTubeAPIDuration from "./convertYouTubeAPIDuration";
 
 function creactVideoGalleryItems(videosDataWithChannelData) {
