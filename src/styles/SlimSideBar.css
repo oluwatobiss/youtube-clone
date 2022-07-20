@@ -6,22 +6,6 @@
   width: 4.5vw;
 }
 
-.slim-nav-link {
-  display: block;
-  width: 100%;
-  color: #030303;
-  text-decoration: none;
-}
-
-.slim-nav-link.button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  font-size: 0.9rem;
-  color: #030303;
-  cursor: pointer;
-}
-
 .slim-sidebar-item-div {
   display: flex;
   flex-direction: column;

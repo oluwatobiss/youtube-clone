@@ -28,24 +28,12 @@
   text-transform: uppercase;
 }
 
-.wide-nav-link {
-  display: block;
-  width: 100%;
+#wide-sidebar .menu-item-link,
+#wide-sidebar .menu-item-btn {
   height: 40px;
-  color: #030303;
-  text-decoration: none;
 }
 
-.wide-nav-link.button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  font-size: 0.9rem;
-  color: #030303;
-  cursor: pointer;
-}
-
-.wide-nav-link.active {
+.menu-item-btn.active {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -63,12 +51,6 @@
 
 .wide-sidebar-icon-span {
   margin-right: 24px;
-  width: 24px;
-  height: 24px;
-}
-
-.aside-svg-icon {
-  display: inline-block;
   width: 24px;
   height: 24px;
 }

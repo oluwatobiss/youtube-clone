@@ -2,3 +2,26 @@ main {
   display: flex;
   height: 100%;
 }
+
+.menu-item-btn {
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  color: #030303;
+  cursor: pointer;
+}
+
+.menu-item-svg-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.menu-item-link {
+  display: block;
+  width: 100%;
+  color: #030303;
+  text-decoration: none;
+}
