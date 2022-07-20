@@ -32,26 +32,31 @@ function App() {
         "sidebar-sign-in-section"
       );
       const profileImage = document.getElementById("header-profile-image");
+      const watchLaterSidebarLink = document.getElementById(
+        "watch-later-sidebar-link"
+      );
+      const likedVideosSidebarLink = document.getElementById(
+        "liked-videos-sidebar-link"
+      );
 
       if (userInfo) {
-        console.log(userInfo);
         // User is signed in!
-        const profilePicUrl =
-          userInfo.photoURL ||
-          require("../assets/images/profile-user-pngrepo-com.png");
-        const userName = userInfo.displayName;
+        const defaultProfilePic = require("../assets/images/profile-user-pngrepo-com.png");
+        const profilePicUrl = userInfo.photoURL || defaultProfilePic;
 
         profileImage.src = profilePicUrl;
         appsSettingsSignInBtns.style.display = "none";
         sidebarSignInSection.style.display = "none";
         createNotificationsProfileBtns.style.display = "flex";
-
-        console.log(userName);
+        watchLaterSidebarLink.style.display = "block";
+        likedVideosSidebarLink.style.display = "block";
       } else {
         // User is signed out!
         createNotificationsProfileBtns.style.display = "none";
         appsSettingsSignInBtns.style.display = "flex";
         sidebarSignInSection.style.display = "block";
+        watchLaterSidebarLink.style.display = "none";
+        likedVideosSidebarLink.style.display = "none";
       }
     }
   }, []);
@@ -66,13 +71,9 @@ function App() {
         profileMenu.classList.remove("visible");
       }
     }
-
     document.addEventListener("keydown", handleKeydown);
-    // document.addEventListener("mousedown", handleClick);
-
     return () => {
       document.removeEventListener("keydown", handleKeydown);
-      // document.removeEventListener("mousedown", handleClick);
     };
   }, []);
 

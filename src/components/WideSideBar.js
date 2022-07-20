@@ -1,8 +1,3 @@
-import { ReactComponent as YouTubeShortsIcon } from "../assets/images/youtube-shorts.svg";
-import { ReactComponent as YouTubeKidsIcon } from "../assets/images/youtube-kids.svg";
-import { ReactComponent as YouTubeTVIcon } from "../assets/images/youtube-tv.svg";
-import MenuItemFactory from "./MenuItemFactory";
-import SignInButton from "./SignInButton";
 import { HiOutlineMusicNote } from "react-icons/hi";
 import { ImTrophy, ImNewspaper } from "react-icons/im";
 import { SiYoutubegaming, SiYoutubemusic } from "react-icons/si";
@@ -12,7 +7,8 @@ import {
   IoHelpCircleOutline,
 } from "react-icons/io5";
 import { BiMask, BiPlusCircle } from "react-icons/bi";
-import { AiFillYoutube } from "react-icons/ai";
+import { AiFillYoutube, AiOutlineLike } from "react-icons/ai";
+import { BsClock } from "react-icons/bs";
 import {
   MdHomeFilled,
   MdOutlineExplore,
@@ -22,6 +18,11 @@ import {
   MdOutlineFlag,
   MdOutlineFeedback,
 } from "react-icons/md";
+import { ReactComponent as YouTubeShortsIcon } from "../assets/images/youtube-shorts.svg";
+import { ReactComponent as YouTubeKidsIcon } from "../assets/images/youtube-kids.svg";
+import { ReactComponent as YouTubeTVIcon } from "../assets/images/youtube-tv.svg";
+import MenuItemFactory from "./MenuItemFactory";
+import SignInButton from "./SignInButton";
 import "../styles/WideSideBar.css";
 
 function WideSideBar() {
@@ -98,6 +99,32 @@ function WideSideBar() {
             iconSpanName="wide-sidebar-icon-span"
             icon={<MdOutlineHistory className="menu-item-svg-icon" />}
             text="History"
+          />
+        </a>
+        <a
+          id="watch-later-sidebar-link"
+          className="menu-item-link"
+          href="https://www.youtube.com/playlist?list=WL"
+          title="Watch Later"
+        >
+          <MenuItemFactory
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
+            icon={<BsClock className="menu-item-svg-icon" />}
+            text="Watch Later"
+          />
+        </a>
+        <a
+          id="liked-videos-sidebar-link"
+          className="menu-item-link"
+          href="https://www.youtube.com/playlist?list=LL"
+          title="Liked videos"
+        >
+          <MenuItemFactory
+            divName="wide-sidebar-item-div"
+            iconSpanName="wide-sidebar-icon-span"
+            icon={<AiOutlineLike className="menu-item-svg-icon" />}
+            text="Liked videos"
           />
         </a>
       </section>
