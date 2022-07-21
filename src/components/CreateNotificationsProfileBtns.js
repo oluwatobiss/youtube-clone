@@ -1,5 +1,5 @@
-import { RiVideoAddLine } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { RiVideoAddLine } from "react-icons/ri";
 
 function CreateNotificationsProfileBtns() {
   function handleClick(e) {

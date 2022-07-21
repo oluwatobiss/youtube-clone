@@ -1,55 +1,60 @@
 import { useState, useEffect } from "react";
 import GalleryLoader from "./GalleryLoader";
 import NextPageLoader from "./NextPageLoader";
-import getVideosDataWithChannelData from "../getVideosDataWithChannelData";
 import creactVideoGalleryItems from "../creactVideoGalleryItems";
+import getVideosAndChannelsData from "../getVideosAndChannelsData";
 import "../styles/HomepageVideoGallery.css";
 
 function HomepageVideoGallery() {
-  const [videosDataWithChannelData, setVideosDataWithChannelData] =
-    useState(null);
   const [videoGalleryItems, setVideoGalleryItems] = useState(null);
+  const [videosAndChannelsData, setVideosAndChannelsData] = useState(null);
+  const [totalVideosOnDisplay, setTotalVideosOnDisplay] = useState(50);
 
   function handleScroll(e) {
-    if (
-      videosDataWithChannelData &&
-      videosDataWithChannelData[0].newNextPageToken
-    ) {
+    if (videosAndChannelsData) {
       const galleryDiv = document.getElementById("homepage-video-gallery");
       const galleryHeight = galleryDiv.clientHeight;
       const lengthScrolled = e.target.documentElement.scrollTop;
       const totalScrollablelength = e.target.documentElement.scrollHeight;
+      const scrolledToPageBottom =
+        galleryHeight + lengthScrolled >= totalScrollablelength;
+      const moreVideosAvailable =
+        totalVideosOnDisplay + 50 <=
+        videosAndChannelsData[0].totalVideosAvailable;
 
-      if (galleryHeight + lengthScrolled >= totalScrollablelength) {
+      if (scrolledToPageBottom && moreVideosAvailable) {
+        setTotalVideosOnDisplay((currentAmount) => currentAmount + 50);
         const nextPageSpinner = document.getElementById("next-page-spinner");
         const lastGalleryItem =
-          videosDataWithChannelData[videosDataWithChannelData.length - 1];
+          videosAndChannelsData[videosAndChannelsData.length - 1];
 
         nextPageSpinner.style.display = "flex";
 
-        getVideosDataWithChannelData(lastGalleryItem.newNextPageToken)
+        getVideosAndChannelsData(lastGalleryItem.nextPageToken)
           .then((newItems) =>
-            setVideosDataWithChannelData((currentItems) => [
+            setVideosAndChannelsData((currentItems) => [
               ...currentItems,
               ...newItems,
             ])
           )
           .catch((error) =>
-            console.error(`getVideosDataWithChannelData Fetch Error: ${error}`)
+            console.error(`getVideosAndChannelsData Fetch Error: ${error}`)
           );
       }
     }
   }
 
   useEffect(() => {
-    getVideosDataWithChannelData().then((items) =>
-      setVideosDataWithChannelData(items)
-    );
+    getVideosAndChannelsData()
+      .then((items) => setVideosAndChannelsData(items))
+      .catch((error) =>
+        console.error(`getVideosAndChannelsData Fetch Error: ${error}`)
+      );
   }, []);
 
   useEffect(() => {
-    setVideoGalleryItems(creactVideoGalleryItems(videosDataWithChannelData));
-  }, [videosDataWithChannelData]);
+    setVideoGalleryItems(creactVideoGalleryItems(videosAndChannelsData));
+  }, [videosAndChannelsData]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

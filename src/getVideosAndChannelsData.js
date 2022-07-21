@@ -1,14 +1,12 @@
 import getVideosData from "./getVideosData";
 import addChannelDataToEachVideoData from "./addChannelDataToEachVideoData";
 
-async function getVideosDataWithChannelData(nextPageToken) {
+async function getVideosAndChannelsData(nextPageToken) {
   const nextPageSpinner = document.getElementById("next-page-spinner");
   const videosData = await getVideosData(nextPageToken);
-  const videosDataWithChannelData = await addChannelDataToEachVideoData(
-    videosData
-  );
+  const videosAndChannelsData = await addChannelDataToEachVideoData(videosData);
   nextPageSpinner.style.display = "none";
-  return videosDataWithChannelData;
+  return videosAndChannelsData;
 }
 
-export default getVideosDataWithChannelData;
+export default getVideosAndChannelsData;

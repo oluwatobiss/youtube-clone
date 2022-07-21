@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import ProfileMenu from "./ProfileMenu";
-import Header from "./Header";
 import HomepageVideoGallery from "./HomepageVideoGallery";
+import ProfileMenu from "./ProfileMenu";
 import Sidebar from "./SideBar";
+import Header from "./Header";
 import "../firebase-config";
 import "../styles/App.css";
 
@@ -11,13 +11,7 @@ function App() {
   function closeProfileMenu() {
     const profileMenu = document.getElementById("profile-menu");
     const profileMenuIsActive = [...profileMenu.classList].includes("visible");
-    if (profileMenuIsActive) {
-      profileMenu.classList.remove("visible");
-    }
-  }
-
-  function handleClick() {
-    closeProfileMenu();
+    profileMenuIsActive && profileMenu.classList.remove("visible");
   }
 
   useEffect(() => {
@@ -82,7 +76,7 @@ function App() {
     <>
       <ProfileMenu />
       <Header />
-      <main onClick={handleClick}>
+      <main onClick={() => closeProfileMenu()}>
         <Sidebar />
         <HomepageVideoGallery />
       </main>

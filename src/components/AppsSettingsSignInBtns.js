@@ -1,5 +1,5 @@
-import SignInButton from "./SignInButton";
 import { BsGrid3X3Gap, BsThreeDotsVertical } from "react-icons/bs";
+import SignInButton from "./SignInButton";
 
 function AppsSettingsSignInBtns() {
   return (

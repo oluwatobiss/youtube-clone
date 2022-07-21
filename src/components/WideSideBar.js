@@ -1,14 +1,8 @@
-import { HiOutlineMusicNote } from "react-icons/hi";
-import { ImTrophy, ImNewspaper } from "react-icons/im";
-import { SiYoutubegaming, SiYoutubemusic } from "react-icons/si";
 import {
   IoRadioOutline,
   IoSettingsOutline,
   IoHelpCircleOutline,
 } from "react-icons/io5";
-import { BiMask, BiPlusCircle } from "react-icons/bi";
-import { AiFillYoutube, AiOutlineLike } from "react-icons/ai";
-import { BsClock } from "react-icons/bs";
 import {
   MdHomeFilled,
   MdOutlineExplore,
@@ -18,6 +12,12 @@ import {
   MdOutlineFlag,
   MdOutlineFeedback,
 } from "react-icons/md";
+import { BsClock } from "react-icons/bs";
+import { HiOutlineMusicNote } from "react-icons/hi";
+import { BiMask, BiPlusCircle } from "react-icons/bi";
+import { ImTrophy, ImNewspaper } from "react-icons/im";
+import { AiFillYoutube, AiOutlineLike } from "react-icons/ai";
+import { SiYoutubegaming, SiYoutubemusic } from "react-icons/si";
 import { ReactComponent as YouTubeShortsIcon } from "../assets/images/youtube-shorts.svg";
 import { ReactComponent as YouTubeKidsIcon } from "../assets/images/youtube-kids.svg";
 import { ReactComponent as YouTubeTVIcon } from "../assets/images/youtube-tv.svg";

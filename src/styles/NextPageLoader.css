@@ -12,6 +12,7 @@
   box-shadow: 17px -10px 40px 30px #fff;
 }
 
+/* Spinkit Loader code: https://tobiasahlin.com/spinkit/ */
 #next-page-spinner > div {
   background-color: #696969;
   height: 50px;

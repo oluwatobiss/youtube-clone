@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { onAuthStateChanged, getAuth, signOut } from "firebase/auth";
-import { MdOutlineLogin, MdOutlineFeedback } from "react-icons/md";
 import { BiDollarCircle } from "react-icons/bi";
 import { RiShieldUserLine } from "react-icons/ri";
+import { MdOutlineLogin, MdOutlineFeedback } from "react-icons/md";
 import { IoSettingsOutline, IoHelpCircleOutline } from "react-icons/io5";
+import { onAuthStateChanged, getAuth, signOut } from "firebase/auth";
 import MenuItemFactory from "./MenuItemFactory";
 import "../styles/ProfileMenu.css";
 
@@ -16,15 +16,12 @@ function ProfileMenu() {
 
   function handleClick() {
     const auth = getAuth();
-
     signOut(auth).catch((error) => {
       console.error(`Sign-out Error: ${error}`);
     });
   }
 
   useEffect(() => {
-    onAuthStateChanged(getAuth(), handleAuthStateChange);
-
     function handleAuthStateChange() {
       if (getAuth().currentUser) {
         setUserProfilePhoto(getAuth().currentUser.photoURL);
@@ -32,6 +29,7 @@ function ProfileMenu() {
         setUserEmail(getAuth().currentUser.email);
       }
     }
+    onAuthStateChanged(getAuth(), handleAuthStateChange);
   }, []);
 
   return (

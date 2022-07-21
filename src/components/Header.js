@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { IoIosSearch } from "react-icons/io";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdKeyboardVoice } from "react-icons/md";
-import { IoIosSearch } from "react-icons/io";
 import AppsSettingsSignInBtns from "./AppsSettingsSignInBtns";
 import CreateNotificationsProfileBtns from "./CreateNotificationsProfileBtns";
 import "../styles/Header.css";
@@ -9,21 +9,10 @@ import "../styles/Header.css";
 function Header() {
   const [searchTerm, setSearchTerm] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (searchTerm) {
-      window.location.href = `https://www.youtube.com/results?search_query=${searchTerm}`;
-    }
-  }
-
-  function handleChange(e) {
-    setSearchTerm(e.target.value);
-  }
-
   function handleHeaderClick(e) {
+    const profileMenu = document.getElementById("profile-menu");
     const profileButton = document.getElementById("profile-btn");
     const headerProfileImage = document.getElementById("header-profile-image");
-    const profileMenu = document.getElementById("profile-menu");
     const profileMenuIsActive = [...profileMenu.classList].includes("visible");
     if (
       e.target !== profileButton &&
@@ -37,12 +26,12 @@ function Header() {
   function handleMenuBtnClick() {
     const wideSidebar = document.getElementById("wide-sidebar");
     const slimSidebar = document.getElementById("slim-sidebar");
-    const gallerySection = document.getElementById("homepage-video-gallery");
+    const gallery = document.getElementById("homepage-video-gallery");
 
     wideSidebar.classList.toggle("hide-wide-sidebar");
     slimSidebar.classList.toggle("hide-slim-sidebar");
-    gallerySection.classList.toggle("if-wide-sidebar-is-active");
-    gallerySection.classList.toggle("if-slim-sidebar-is-active");
+    gallery.classList.toggle("if-wide-sidebar-is-active");
+    gallery.classList.toggle("if-slim-sidebar-is-active");
   }
 
   function handleMouseDown(e) {
@@ -53,6 +42,12 @@ function Header() {
   function handleMouseUp(e) {
     e.currentTarget.style.backgroundColor = "transparent";
     e.currentTarget.style.border = "none";
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    searchTerm &&
+      (window.location.href = `https://www.youtube.com/results?search_query=${searchTerm}`);
   }
 
   return (
@@ -78,7 +73,7 @@ function Header() {
           <input
             type="search"
             value={searchTerm}
-            onChange={handleChange}
+            onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search"
           />
           <button title="Search">

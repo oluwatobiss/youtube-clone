@@ -1,5 +1,5 @@
-import { CgProfile } from "react-icons/cg";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { CgProfile } from "react-icons/cg";
 
 function SignInButton() {
   async function handleClick() {

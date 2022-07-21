@@ -2,11 +2,11 @@ import moment from "moment";
 import { abbreviateNumber } from "js-abbreviation-number";
 import convertYouTubeAPIDuration from "./convertYouTubeAPIDuration";
 
-function creactVideoGalleryItems(videosDataWithChannelData) {
+function creactVideoGalleryItems(videosAndChannelsData) {
   let videoGalleryItemsArray = null;
 
-  if (videosDataWithChannelData) {
-    videoGalleryItemsArray = videosDataWithChannelData.map(function (item) {
+  if (videosAndChannelsData) {
+    videoGalleryItemsArray = videosAndChannelsData.map(function (item) {
       const publishedDate = item.publishedAt.slice(0, 10);
       const publishedDateWithoutHyphens = publishedDate.replace(/-/g, "");
       const relativeTime = moment(
