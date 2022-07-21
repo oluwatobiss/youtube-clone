@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { onAuthStateChanged, getAuth } from "firebase/auth";
+import { onAuthStateChanged, getAuth, signOut } from "firebase/auth";
 import { MdOutlineLogin, MdOutlineFeedback } from "react-icons/md";
 import { BiDollarCircle } from "react-icons/bi";
 import { RiShieldUserLine } from "react-icons/ri";
@@ -13,6 +13,14 @@ function ProfileMenu() {
   );
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
+
+  function handleClick() {
+    const auth = getAuth();
+
+    signOut(auth).catch((error) => {
+      console.error(`Sign-out Error: ${error}`);
+    });
+  }
 
   useEffect(() => {
     onAuthStateChanged(getAuth(), handleAuthStateChange);
@@ -52,7 +60,7 @@ function ProfileMenu() {
       </section>
       <section id="profile-menu-links">
         <section>
-          <button className="menu-item-btn">
+          <button className="menu-item-btn" onClick={handleClick}>
             <MenuItemFactory
               divName="wide-sidebar-item-div"
               iconSpanName="wide-sidebar-icon-span"

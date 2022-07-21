@@ -35,7 +35,7 @@ function HomepageVideoGallery() {
             ])
           )
           .catch((error) =>
-            console.log(`getVideosDataWithChannelData Fetch Error: ${error}`)
+            console.error(`getVideosDataWithChannelData Fetch Error: ${error}`)
           );
       }
     }

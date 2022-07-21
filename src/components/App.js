@@ -8,12 +8,16 @@ import "../firebase-config";
 import "../styles/App.css";
 
 function App() {
-  function handleClick() {
+  function closeProfileMenu() {
     const profileMenu = document.getElementById("profile-menu");
     const profileMenuIsActive = [...profileMenu.classList].includes("visible");
     if (profileMenuIsActive) {
       profileMenu.classList.remove("visible");
     }
+  }
+
+  function handleClick() {
+    closeProfileMenu();
   }
 
   useEffect(() => {
@@ -52,6 +56,7 @@ function App() {
         likedVideosSidebarLink.style.display = "block";
       } else {
         // User is signed out!
+        closeProfileMenu();
         createNotificationsProfileBtns.style.display = "none";
         appsSettingsSignInBtns.style.display = "flex";
         sidebarSignInSection.style.display = "block";
@@ -63,12 +68,8 @@ function App() {
 
   useEffect(() => {
     function handleKeydown(e) {
-      const profileMenu = document.getElementById("profile-menu");
-      const profileMenuIsActive = [...profileMenu.classList].includes(
-        "visible"
-      );
-      if (e.key === "Escape" && profileMenuIsActive) {
-        profileMenu.classList.remove("visible");
+      if (e.key === "Escape") {
+        closeProfileMenu();
       }
     }
     document.addEventListener("keydown", handleKeydown);

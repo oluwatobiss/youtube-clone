@@ -5,7 +5,9 @@ function SignInButton() {
   async function handleClick() {
     const auth = getAuth();
     const authProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, authProvider);
+    signInWithPopup(auth, authProvider).catch(
+      (error) => `Sign-in Error: ${error}`
+    );
   }
 
   return (

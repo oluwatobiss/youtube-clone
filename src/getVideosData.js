@@ -28,8 +28,6 @@ async function getVideosData(nextPageToken) {
     };
   });
 
-  console.log(data);
-
   return videosData;
 }
 
