@@ -16,3 +16,21 @@ aside {
 aside:hover {
   scrollbar-color: #909090 transparent;
 }
+
+aside::-webkit-scrollbar {
+  width: 8px;
+}
+
+aside::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 20px;
+}
+
+aside:hover::-webkit-scrollbar-thumb {
+  background-color: #909090;
+}
