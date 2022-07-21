@@ -1,6 +1,6 @@
-import "../styles/Loader.css";
+import "../styles/GalleryLoader.css";
 
-function Loader() {
+function GalleryLoader() {
   return (
     <div id="loader-bg">
       <div className="spinner">
@@ -11,4 +11,4 @@ function Loader() {
   );
 }
 
-export default Loader;
+export default GalleryLoader;
