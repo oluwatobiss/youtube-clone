@@ -342,6 +342,9 @@ function WideSideBar() {
       </section>
       <footer>
         <div className="footer-primary-links-div">
+          <a href="https://codesweetly.com/" target="_blank" rel="noreferrer">
+            Created by Oluwatobi Sofela
+          </a>
           <a href="https://www.youtube.com/about/">About</a>
           <a href="https://www.youtube.com/about/press/">Press</a>
           <a href="https://www.youtube.com/about/copyright/">Copyright</a>
