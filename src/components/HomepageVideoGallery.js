@@ -15,26 +15,29 @@ function HomepageVideoGallery() {
       videosDataWithChannelData &&
       videosDataWithChannelData[0].newNextPageToken
     ) {
-      const nextPageSpinner = document.getElementById("next-page-spinner");
       const galleryDiv = document.getElementById("homepage-video-gallery");
       const galleryHeight = galleryDiv.clientHeight;
       const lengthScrolled = e.target.documentElement.scrollTop;
       const totalScrollablelength = e.target.documentElement.scrollHeight;
-      nextPageSpinner.style.display = "flex";
 
       if (galleryHeight + lengthScrolled >= totalScrollablelength) {
+        const nextPageSpinner = document.getElementById("next-page-spinner");
         const lastGalleryItem =
           videosDataWithChannelData[videosDataWithChannelData.length - 1];
 
-        getVideosDataWithChannelData(lastGalleryItem.newNextPageToken).then(
-          (newItems) =>
+        nextPageSpinner.style.display = "flex";
+
+        getVideosDataWithChannelData(lastGalleryItem.newNextPageToken)
+          .then((newItems) =>
             setVideosDataWithChannelData((currentItems) => [
               ...currentItems,
               ...newItems,
             ])
-        );
+          )
+          .catch((error) =>
+            console.log(`getVideosDataWithChannelData Fetch Error: ${error}`)
+          );
       }
-      nextPageSpinner.style.display = "none";
     }
   }
 
